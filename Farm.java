@@ -1,24 +1,24 @@
 package ua.lviv.iot.firstLab;
 
-public record Farm(String Location, int NumberOfAnimals, int PowerOfFans, int NumberOfEmployee, String NameOfOwner, boolean Export) {
+public record Farm(String location, int numberOfAnimals, int powerOfFans, int numberOfEmployee, String nameOfOwner, boolean export) {
 	
-	public static String NumberOfcard = "4444 3333 1234 5555";
-	public static String PhoneNumber = "0671265111";
+	public static String numberOfcard = "4444 3333 1234 5555";
+	public static String phoneNumber = "0671265111";
 	
 	Farm() {
 		this("Lviv", 120, 8, 100, "Max", true);
 	}
 	
-	Farm(String Location, int NumberOfAnimals, int PowerOfFans) {
-		this(Location, NumberOfAnimals, PowerOfFans, 50, "Igor", false);
+	Farm(String location, int numberOfAnimals, int powerOfFans) {
+		this(location, numberOfAnimals, powerOfFans, 50, "Igor", false);
 	}
 	
-	public static void Order() {
-		System.out.println("if you want to place an order, call this number:" + NumberOfcard);
+	public static void order() {
+		System.out.println("if you want to place an order, call this number:" + phoneNumber);
 	}
 	
 	@Override
     public String toString() {
-		return "Farm info:" + Location + "," + NumberOfAnimals +"," + PowerOfFans +"," + NumberOfEmployee +"," + NameOfOwner +"," + Export;
+		return "Farm info:" + location + "," + numberOfAnimals +"," + powerOfFans +"," + numberOfEmployee +"," + nameOfOwner +"," + export;
 	}
 }
