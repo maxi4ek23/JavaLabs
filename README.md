@@ -7,4 +7,4 @@ Task description:
 
 - We need to work only with command line
 
-- We need generate pom.xml 
+- We need to generate pom.xml 
