@@ -64,10 +64,4 @@ public class Manager implements IManager {
 	public Collection<List<OfficeSupply>> getAll() {
 		return suppliesMap.values();
 	}
-	
-	
-	
-	
-	
-	
 }
