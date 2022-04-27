@@ -6,9 +6,10 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
+
 import ua.lviv.iot.lab4.manager.IManager;
 import ua.lviv.iot.lab4.models.OfficeSupply;
-
 
 public class Manager implements IManager {
 	private Map<String, List <OfficeSupply>> suppliesMap = new HashMap<>(); 
@@ -60,14 +61,8 @@ public class Manager implements IManager {
 		 }
 		 return supplies;
 	}
-	
+
 	public Collection<List<OfficeSupply>> getAll() {
 		return suppliesMap.values();
 	}
-	
-	
-	
-	
-	
-	
 }

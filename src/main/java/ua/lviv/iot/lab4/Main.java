@@ -13,7 +13,7 @@ public class Main {
 		System.out.print(calculator);
 		Glue glue = new Glue("GTX3", 120, 1000, false, "Hungary", 756743, "green", 1);
 		Scissor scissor = new Scissor("GTX4", 345, 1000, false, "Turkey", 6476963, "green", 3);
-		Stapler stapler = new Stapler("GTX5", 540, 1000, false, "USA", 5366434, "black", 12);  
+		Stapler stapler = new Stapler("GTX5", 540, 1000, false, "USA", 5366434, "black", 12);
 		List<OfficeSupply> stockOfficeSupplies = new ArrayList<>();
 		stockOfficeSupplies.add(stapler);
 		stockOfficeSupplies.add(glue); 
