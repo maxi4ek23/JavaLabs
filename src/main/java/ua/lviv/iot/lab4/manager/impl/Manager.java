@@ -23,8 +23,8 @@ public class Manager implements IManager {
 			existingOfficeSupplies = new LinkedList<OfficeSupply>();  
 			suppliesMap.put(name, existingOfficeSupplies);	
 		}
-		existingOfficeSupplies.add(supplie);
-	});
+		existingOfficeSupplies.add(supplie);  
+	}); 
 	}
 	
 	@Override

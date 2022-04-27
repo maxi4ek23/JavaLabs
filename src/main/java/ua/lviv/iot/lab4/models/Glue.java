@@ -1,12 +1,22 @@
 package ua.lviv.iot.lab4.models;
 
 public class Glue extends OfficeSupply {
-	public Glue(String name, int price, int quantity, boolean safeForChildren, String origin, int id, String color, int weight) {
-		super(name, price, quantity, safeForChildren, origin, id, color, weight);
+	private int volume;
+	public Glue(String name, int price, int quantity, String origin, int id, String color, int weight, int volume) {
+		super(name, price, quantity, origin, id, color, weight);
+		this.volume = volume;
+	}
+	@Override
+	public String getHeaders() {
+		return super.getHeaders() + ", volume";
+	}
+	@Override
+	public String toCSV() {
+		return super.toCSV() + "," + volume;
 	}
 	@Override
 	public String toString() {
-		return "Glues " + super.toString();
+		return  super.toString();  
 	}
 	
 }

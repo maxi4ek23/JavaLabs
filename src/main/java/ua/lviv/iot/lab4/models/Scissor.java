@@ -1,12 +1,22 @@
 package ua.lviv.iot.lab4.models;
 
 public class Scissor extends OfficeSupply { 
-	public Scissor(String name, int price, int quantity, boolean safeForChildren, String origin, int id, String color, int weight) {
-		super(name, price, quantity, safeForChildren, origin, id, color, weight);
+	private String bladeMaterial;
+	public Scissor(String name, int price, int quantity, String origin, int id, String color, int weight, String bladeMaterial) {
+		super(name, price, quantity, origin, id, color, weight);
+		this.bladeMaterial = bladeMaterial;
+	}
+	@Override
+	public String getHeaders() {
+		return super.getHeaders() + ", bladeMaterial";
+	}
+	@Override
+	public String toCSV() {
+		return super.toCSV() + "," + bladeMaterial;
 	}
 	@Override
 	public String toString() {
-		return "Scissor " + super.toString();
-	}
+		return  super.toString(); 
+	} 
 	
 }

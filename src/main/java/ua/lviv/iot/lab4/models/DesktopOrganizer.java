@@ -1,13 +1,23 @@
 package ua.lviv.iot.lab4.models;
 
 public class DesktopOrganizer extends OfficeSupply {
-	public DesktopOrganizer(String name, int price, int quantity, boolean safeForChildren, String origin, int id, String color,
-			int weight) {
-		super(name, price, quantity, safeForChildren, origin, id, color, weight);
+	private String standDesign;
+	public DesktopOrganizer(String name, int price, int quantity, String origin, int id, String color,
+			int weight, String standDesign) {
+		super(name, price, quantity, origin, id, color, weight);
+		this.standDesign = standDesign;
+	}
+	@Override
+	public String getHeaders() {
+		return super.getHeaders() + ", standDesign";
+	}
+	@Override
+	public String toCSV() {
+		return super.toCSV() + "," + standDesign;
 	}
 	@Override
 	public String toString() {
-		return "DesktopOrganizer " + super.toString();
+		return  super.toString();   
 	}
 	
 }

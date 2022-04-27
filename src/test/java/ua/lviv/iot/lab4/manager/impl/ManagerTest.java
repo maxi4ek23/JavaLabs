@@ -30,16 +30,16 @@ class ManagerTest {
 	@AfterAll
 	static void tearDownAfterClass() throws Exception {
 	}
-
+ 
 	@BeforeEach
 	void setUp() throws Exception {
 		manager = new Manager();
 		supplies = new LinkedList<OfficeSupply>();
-		supplies.add( new DesktopOrganizer("GTX1", 250, 1000, false, "Spain", 58385889, "stable", 9));
-		supplies.add(new Calculator("GTX2", 55, 1000, true, "France", 1847184043, "grey", 10));
-		supplies.add(new Glue("GTX3", 120, 1000, false, "Hungary", 756743, "green", 1));
-		supplies.add(new Scissor("GTX4", 345, 1000, false, "Turkey", 6476963, "green", 3));
-		supplies.add(new Stapler("GTX5", 540, 1000, false, "USA", 5366434, "black", 12)); 
+		supplies.add( new DesktopOrganizer("GTX1", 250, 1000, "Spain", 58385889, "stable", 9, null)); 
+		supplies.add(new Calculator("GTX2", 55,100, "France", 1847184043, "grey", 10, 11, 1));  
+		supplies.add(new Glue("GTX3", 120, 1000, "Hungary", 756743, "green", 1, 0));
+		supplies.add(new Scissor("GTX4", 345, 1000, "Turkey", 6476963, "green", 3, null));
+		supplies.add(new Stapler("GTX5", 540, 1000, "USA", 5366434, "black", 12, null));  
 		manager.addOfficeSupply(supplies);	     
 	}
 
@@ -61,7 +61,7 @@ class ManagerTest {
 		var actual = manager.findByColor("green");
 		Assert.assertNotNull(actual);
 	}
-	
+	 
 	@Test
 	void testAscSortByPrice() {
 		manager.sortByPrice(supplies, true);
@@ -88,7 +88,7 @@ class ManagerTest {
 		Assert.assertEquals(1, supplies.get(0).getWeight());
 		Assert.assertEquals(3, supplies.get(1).getWeight()); 
 		Assert.assertEquals(9, supplies.get(2).getWeight());
-		Assert.assertEquals(10, supplies.get(3).getWeight());
+		Assert.assertEquals(10, supplies.get(3).getWeight()); 
 		Assert.assertEquals(12, supplies.get(4).getWeight());
 	} 
 	 
