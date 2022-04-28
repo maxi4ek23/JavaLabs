@@ -1,0 +1,4 @@
+name, price, quantity, origin, id, color, weight, memoryRegisters
+GTX2,55,1000,France,2,grey,10,3
+GTX6,60,1000,France,6,grey, white,10,3
+GTX7,65,1000,France,7,grey, black,10,4
