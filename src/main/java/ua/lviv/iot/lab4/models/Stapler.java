@@ -16,6 +16,6 @@ public class Stapler extends OfficeSupply {
 	}
 	@Override
 	public String toString() {
-		return  super.toString();  
+		return  super.toString();   
 	}
 }

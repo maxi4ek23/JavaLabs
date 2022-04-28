@@ -29,7 +29,7 @@ public class Manager implements IManager {
 	
 	@Override
 	public List<OfficeSupply> findByColor(String color) {
-		List<OfficeSupply> result = new LinkedList<OfficeSupply>();
+		List<OfficeSupply> result = new LinkedList<OfficeSupply>(); 
 		for(List<OfficeSupply> supplies : suppliesMap.values()) {
 			for(OfficeSupply supplie : supplies) {
 				if(supplie.getColor().equals(color)) {
@@ -45,7 +45,7 @@ public class Manager implements IManager {
 		 if(isReversed) {
 			 supplies.sort(Comparator.comparing(OfficeSupply::getPrice));
 		 }
-		 else {
+		 else { 
 			 supplies.sort(Comparator.comparing(OfficeSupply::getPrice).reversed());
 		 }
 		 return supplies; 
