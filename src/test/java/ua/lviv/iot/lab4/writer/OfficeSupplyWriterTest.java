@@ -1,6 +1,5 @@
 package ua.lviv.iot.lab4.writer;
 
-import static org.junit.Assert.assertEquals;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -39,17 +38,17 @@ class OfficeSupplyWriterTest {
 		emptySupplies = new LinkedList<>();
 		allSupplies = new LinkedList<OfficeSupply>();
 		allSupplies.add(new Glue("GTX3", 120, 500, "Hungary", 3, "green", 5, 100));
-		allSupplies.add(new Glue("GTX8", 125, 1500, "Hungary", 8, "green, red", 5, 100));
-		allSupplies.add(new Glue("GTX11", 135, 1000, "Hungary", 11, "green, white, red", 5, 100));
+		allSupplies.add(new Glue("GTX8", 125, 1500, "Hungary", 8, "green", 5, 100));
+		allSupplies.add(new Glue("GTX11", 135, 1000, "Hungary", 11, "green", 5, 100));
 		allSupplies.add(new Stapler("GTX5", 540, 1000, "USA", 5, "black", 12, "plastic"));
 		allSupplies.add(new Stapler("GTX10", 540, 1000, "USA", 10, "black", 12, "plastic"));
 		allSupplies.add(new Calculator("GTX2", 55, 1000, "France", 2, "grey", 10, 3));
-		allSupplies.add(new Calculator("GTX6", 60, 1000, "France", 6, "grey, white", 10, 3));
-		allSupplies.add(new Calculator("GTX7", 65, 1000, "France", 7, "grey, black", 10, 4));
+		allSupplies.add(new Calculator("GTX6", 60, 1000, "France", 6, "grey", 10, 3));
+		allSupplies.add(new Calculator("GTX7", 65, 1000, "France", 7, "grey", 10, 4));
 		oneSubclassSupplies = new LinkedList<OfficeSupply>();
 		oneSubclassSupplies.add(new Calculator("GTX2", 55, 1000, "France", 2, "grey", 10, 3));
-		oneSubclassSupplies.add(new Calculator("GTX6", 60, 1000, "France", 6, "grey, white", 10, 3));
-		oneSubclassSupplies.add(new Calculator("GTX7", 65, 1000, "France", 7, "grey, black", 10, 4)); 
+		oneSubclassSupplies.add(new Calculator("GTX6", 60, 1000, "France", 6, "grey", 10, 3));
+		oneSubclassSupplies.add(new Calculator("GTX7", 65, 1000, "France", 7, "grey", 10, 4));  
 	}
 
 	@AfterEach
@@ -75,11 +74,11 @@ class OfficeSupplyWriterTest {
 				 BufferedReader actualBF = new BufferedReader(new FileReader("OfficeSupply.csv"))) {
 			 String expectedLine;
 			 while ((expectedLine = expectedBF.readLine()) != null) {
-				 assertEquals(expectedLine, actualBF.readLine());
+				 Assert.assertEquals(expectedLine, actualBF.readLine()); 
 			 }
 		 }
      }
-		  
+	 
 	 @Test
 	    void writeArachnidaOnlyCSVTest() throws IOException {
 		 OfficeSupplyWriter.writeToFile(oneSubclassSupplies);
@@ -89,10 +88,12 @@ class OfficeSupplyWriterTest {
 	            BufferedReader actualBF = new BufferedReader(new FileReader("OfficeSupply.csv"))) {
 	            String expectedLine;
 	            while ((expectedLine = expectedBF.readLine()) != null) {
-	                assertEquals(expectedLine, actualBF.readLine());
+	                Assert.assertEquals(expectedLine, actualBF.readLine());
 	            }
 	        } 
 	    }
+		  
+	 
 } 
 	
 	
