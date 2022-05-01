@@ -1,6 +1,5 @@
 package ua.lviv.iot.lab4.writer;
 
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -20,13 +19,13 @@ import ua.lviv.iot.lab4.models.OfficeSupply;
 import ua.lviv.iot.lab4.models.Stapler;
 
 class OfficeSupplyWriterTest {
-	private List <OfficeSupply> allSupplies;
-	private List <OfficeSupply> emptySupplies;
-	private List <OfficeSupply> oneSubclassSupplies;
-	
+	private List<OfficeSupply> allSupplies;
+	private List<OfficeSupply> emptySupplies;
+    private List<OfficeSupply> oneSubclassSupplies;
+
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-	} 
+	}
 
 	@AfterAll
 	static void tearDownAfterClass() throws Exception {
@@ -48,54 +47,50 @@ class OfficeSupplyWriterTest {
 		oneSubclassSupplies = new LinkedList<OfficeSupply>();
 		oneSubclassSupplies.add(new Calculator("GTX2", 55, 1000, "France", 2, "grey", 10, 3));
 		oneSubclassSupplies.add(new Calculator("GTX6", 60, 1000, "France", 6, "grey", 10, 3));
-		oneSubclassSupplies.add(new Calculator("GTX7", 65, 1000, "France", 7, "grey", 10, 4));  
+		oneSubclassSupplies.add(new Calculator("GTX7", 65, 1000, "France", 7, "grey", 10, 4));
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
 	}
 
-	@Test 
+	@Test
 	void testExpectedEmpty() throws IOException {
 		OfficeSupplyWriter.writeToFile(emptySupplies);
-		try(BufferedReader expectedBF = new BufferedReader(new FileReader("I:\\Games\\eclipse\\lab4\\lab4\\src\\test\\resources\\expectedEmpty.csv"));
+		try (BufferedReader expectedBF = new BufferedReader(
+				new FileReader("I:\\Games\\eclipse\\lab4\\lab4\\src\\test\\resources\\expectedEmpty.csv"));
 				BufferedReader actualBF = new BufferedReader(new FileReader("OfficeSupply.csv"))) {
-				String expectedLine = expectedBF.readLine();
-				String actualLine = actualBF.readLine();
-				Assert.assertEquals(expectedLine, actualLine);   
-				}			
+			String expectedLine = expectedBF.readLine();
+			String actualLine = actualBF.readLine();
+			Assert.assertEquals(expectedLine, actualLine);
+		}
 	}
-	
-	 @Test
-	    void writeGeneralAnimalCSVTest() throws IOException {
-		 OfficeSupplyWriter.writeToFile(allSupplies);
-		 try (BufferedReader expectedBF = new BufferedReader(new FileReader(
-	        		"I:\\Games\\eclipse\\lab4\\lab4\\src\\test\\resources\\expectedAll.csv"));
-				 BufferedReader actualBF = new BufferedReader(new FileReader("OfficeSupply.csv"))) {
-			 String expectedLine;
-			 while ((expectedLine = expectedBF.readLine()) != null) {
-				 Assert.assertEquals(expectedLine, actualBF.readLine()); 
-			 }
-		 }
-     }
-	 
-	 @Test
-	    void writeArachnidaOnlyCSVTest() throws IOException {
-		 OfficeSupplyWriter.writeToFile(oneSubclassSupplies);
 
-	        try (BufferedReader expectedBF = new BufferedReader(new FileReader(
-	    	        		"I:\\Games\\eclipse\\lab4\\lab4\\src\\test\\resources\\expectedByOneSubclass.csv"));
-	            BufferedReader actualBF = new BufferedReader(new FileReader("OfficeSupply.csv"))) {
-	            String expectedLine;
-	            while ((expectedLine = expectedBF.readLine()) != null) {
-	                Assert.assertEquals(expectedLine, actualBF.readLine());
-	            }
-	        } 
-	    }
-		  
-	 
-} 
-	
-	
-	
+	@Test
+	void writeGeneralAnimalCSVTest() throws IOException {
+		OfficeSupplyWriter.writeToFile(allSupplies);
+		try (BufferedReader expectedBF = new BufferedReader(
+				new FileReader("I:\\Games\\eclipse\\lab4\\lab4\\src\\test\\resources\\expectedAll.csv"));
+				BufferedReader actualBF = new BufferedReader(new FileReader("OfficeSupply.csv"))) {
+			String expectedLine;
+			while ((expectedLine = expectedBF.readLine()) != null) {
+				Assert.assertEquals(expectedLine, actualBF.readLine());
+			}
+		}
+	}
 
+	@Test
+	void writeArachnidaOnlyCSVTest() throws IOException {
+		OfficeSupplyWriter.writeToFile(oneSubclassSupplies);
+
+		try (BufferedReader expectedBF = new BufferedReader(
+				new FileReader("I:\\Games\\eclipse\\lab4\\lab4\\src\\test\\resources\\expectedByOneSubclass.csv"));
+				BufferedReader actualBF = new BufferedReader(new FileReader("OfficeSupply.csv"))) {
+			String expectedLine;
+			while ((expectedLine = expectedBF.readLine()) != null) {
+				Assert.assertEquals(expectedLine, actualBF.readLine());
+			}
+		}
+	}
+
+}
