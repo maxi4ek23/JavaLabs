@@ -1,5 +1,10 @@
 package ua.lviv.iot.lab4.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class Scissor extends OfficeSupply { 
 	private String bladeMaterial;
 	public Scissor(String name, int price, int quantity, String origin, int id, String color, int weight, String bladeMaterial) {

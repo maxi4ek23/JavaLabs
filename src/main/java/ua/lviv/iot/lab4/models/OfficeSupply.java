@@ -1,5 +1,10 @@
 package ua.lviv.iot.lab4.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class OfficeSupply  {
 	private String name;
 	private int price;
@@ -16,19 +21,6 @@ public class OfficeSupply  {
 		this.id = id;
 		this.color = color;
 		this.weight = weight; 
-	}
-	
-	public String getName() {
-		return name;
-	}
-	public int getPrice() {
-		return price;
-	}
-	public String getColor() {
-		return color;
-	}
-	public int getWeight() {
-		return weight;
 	}
 	public String getHeaders() {
 		return "name, price, quantity, origin, id, color, weight"; 

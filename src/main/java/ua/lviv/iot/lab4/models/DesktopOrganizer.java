@@ -1,5 +1,10 @@
 package ua.lviv.iot.lab4.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class DesktopOrganizer extends OfficeSupply {
 	private String standDesign;
 	public DesktopOrganizer(String name, int price, int quantity, String origin, int id, String color,

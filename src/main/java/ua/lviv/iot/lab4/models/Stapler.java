@@ -1,5 +1,10 @@
 package ua.lviv.iot.lab4.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Stapler extends OfficeSupply {
 	private String housingMaterial;
 	public Stapler(String name, int price, int quantity, String origin, int id, String color, int weight, String housingMaterial) {
