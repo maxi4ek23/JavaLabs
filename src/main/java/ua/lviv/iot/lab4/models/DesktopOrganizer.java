@@ -8,8 +8,8 @@ import lombok.Setter;
 public class DesktopOrganizer extends OfficeSupply {
     private String standDesign;
 
-    public DesktopOrganizer(String name, int price, int quantity, String origin, int id, String color, int weight,
-            String standDesign) {
+    public DesktopOrganizer(String name, int price, int quantity, String origin,
+            int id, String color, int weight, String standDesign) {
         super(name, price, quantity, origin, id, color, weight);
         this.standDesign = standDesign;
     }

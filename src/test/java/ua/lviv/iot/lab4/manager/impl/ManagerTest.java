@@ -34,11 +34,16 @@ class ManagerTest {
     void setUp() throws Exception {
         manager = new Manager();
         supplies = new LinkedList<OfficeSupply>();
-        supplies.add(new DesktopOrganizer("GTX1", 250, 1000, "Spain", 58385889, "stable", 9, null));
-        supplies.add(new Calculator("GTX2", 55, 100, "France", 1847184043, "grey", 10, 11));
-        supplies.add(new Glue("GTX3", 120, 1000, "Hungary", 756743, "green", 1, 0));
-        supplies.add(new Scissor("GTX4", 345, 1000, "Turkey", 6476963, "green", 3, null));
-        supplies.add(new Stapler("GTX5", 540, 1000, "USA", 5366434, "black", 12, null));
+        supplies.add(new DesktopOrganizer("GTX1", 250, 1000, "Spain", 58385889,
+                "stable", 9, null));
+        supplies.add(new Calculator("GTX2", 55, 100, "France", 1847184043,
+                "grey", 10, 11));
+        supplies.add(
+                new Glue("GTX3", 120, 1000, "Hungary", 756743, "green", 1, 0));
+        supplies.add(new Scissor("GTX4", 345, 1000, "Turkey", 6476963, "green",
+                3, null));
+        supplies.add(new Stapler("GTX5", 540, 1000, "USA", 5366434, "black", 12,
+                null));
         manager.addOfficeSupply(supplies);
     }
 

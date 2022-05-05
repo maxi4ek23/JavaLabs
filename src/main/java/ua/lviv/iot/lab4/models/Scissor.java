@@ -8,8 +8,8 @@ import lombok.Setter;
 public class Scissor extends OfficeSupply {
     private String bladeMaterial;
 
-    public Scissor(String name, int price, int quantity, String origin, int id, String color, int weight,
-            String bladeMaterial) {
+    public Scissor(String name, int price, int quantity, String origin, int id,
+            String color, int weight, String bladeMaterial) {
         super(name, price, quantity, origin, id, color, weight);
         this.bladeMaterial = bladeMaterial;
     }

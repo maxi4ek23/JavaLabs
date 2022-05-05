@@ -8,8 +8,8 @@ import lombok.Setter;
 public class Calculator extends OfficeSupply {
     private int memoryRegisters;
 
-    public Calculator(String name, int price, int quantity, String origin, int id, String color, int weight,
-            int memoryRegisters) {
+    public Calculator(String name, int price, int quantity, String origin,
+            int id, String color, int weight, int memoryRegisters) {
         super(name, price, quantity, origin, id, color, weight);
         this.memoryRegisters = memoryRegisters;
     }

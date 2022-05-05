@@ -40,21 +40,25 @@ public class Manager implements IManager {
     }
 
     @Override
-    public List<OfficeSupply> sortByPrice(List<OfficeSupply> supplies, boolean isReversed) {
+    public List<OfficeSupply> sortByPrice(List<OfficeSupply> supplies,
+            boolean isReversed) {
         if (isReversed) {
             supplies.sort(Comparator.comparing(OfficeSupply::getPrice));
         } else {
-            supplies.sort(Comparator.comparing(OfficeSupply::getPrice).reversed());
+            supplies.sort(
+                    Comparator.comparing(OfficeSupply::getPrice).reversed());
         }
         return supplies;
     }
 
     @Override
-    public List<OfficeSupply> sortByWeight(List<OfficeSupply> supplies, boolean isReversed) {
+    public List<OfficeSupply> sortByWeight(List<OfficeSupply> supplies,
+            boolean isReversed) {
         if (isReversed) {
             supplies.sort(Comparator.comparing(OfficeSupply::getWeight));
         } else {
-            supplies.sort(Comparator.comparing(OfficeSupply::getWeight).reversed());
+            supplies.sort(
+                    Comparator.comparing(OfficeSupply::getWeight).reversed());
         }
         return supplies;
     }

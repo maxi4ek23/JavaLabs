@@ -9,7 +9,9 @@ public interface IManager {
 
     List<OfficeSupply> findByColor(String color);
 
-    List<OfficeSupply> sortByPrice(List<OfficeSupply> supplies, boolean isReversed);
+    List<OfficeSupply> sortByPrice(List<OfficeSupply> supplies,
+            boolean isReversed);
 
-    List<OfficeSupply> sortByWeight(List<OfficeSupply> supplies, boolean isReversed);
+    List<OfficeSupply> sortByWeight(List<OfficeSupply> supplies,
+            boolean isReversed);
 }

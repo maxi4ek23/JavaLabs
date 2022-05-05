@@ -14,7 +14,8 @@ public class OfficeSupply {
     private String color;
     private int weight;
 
-    public OfficeSupply(String name, int price, int quantity, String origin, int id, String color, int weight) {
+    public OfficeSupply(String name, int price, int quantity, String origin,
+            int id, String color, int weight) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -29,13 +30,15 @@ public class OfficeSupply {
     }
 
     public String toCSV() {
-        return name + "," + price + "," + quantity + "," + origin + "," + id + "," + color + "," + weight;
+        return name + "," + price + "," + quantity + "," + origin + "," + id
+                + "," + color + "," + weight;
     }
 
     @Override
     public String toString() {
-        return " Name=" + name + ", price=" + price + ", quantity=" + quantity + ", origin=" + origin + ", id=" + id
-                + ", color=" + color + ", weight=" + weight;
+        return " Name=" + name + ", price=" + price + ", quantity=" + quantity
+                + ", origin=" + origin + ", id=" + id + ", color=" + color
+                + ", weight=" + weight;
 
     }
 

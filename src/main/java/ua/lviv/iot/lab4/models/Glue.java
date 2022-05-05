@@ -8,7 +8,8 @@ import lombok.Setter;
 public class Glue extends OfficeSupply {
     private int volume;
 
-    public Glue(String name, int price, int quantity, String origin, int id, String color, int weight, int volume) {
+    public Glue(String name, int price, int quantity, String origin, int id,
+            String color, int weight, int volume) {
         super(name, price, quantity, origin, id, color, weight);
         this.volume = volume;
     }

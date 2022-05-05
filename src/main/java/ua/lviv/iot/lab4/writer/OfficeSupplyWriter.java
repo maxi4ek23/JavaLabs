@@ -9,12 +9,16 @@ import java.util.List;
 import ua.lviv.iot.lab4.models.OfficeSupply;
 
 public class OfficeSupplyWriter {
-    public static void writeToFile(List<OfficeSupply> supplies) throws IOException {
-        try (FileWriter writer = new FileWriter("OfficeSupply.csv", Charset.defaultCharset())) {
-            supplies.sort(Comparator.comparing(supply -> supply.getClass().getName()));
+    public static void writeToFile(List<OfficeSupply> supplies)
+            throws IOException {
+        try (FileWriter writer = new FileWriter("OfficeSupply.csv",
+                Charset.defaultCharset())) {
+            supplies.sort(Comparator
+                    .comparing(supply -> supply.getClass().getName()));
             String previousClassName = "";
             for (var supply : supplies) {
-                if (!supply.getClass().getSimpleName().equals(previousClassName)) {
+                if (!supply.getClass().getSimpleName()
+                        .equals(previousClassName)) {
                     writer.write(supply.getHeaders());
                     writer.write("\r\n");
                     previousClassName = supply.getClass().getSimpleName();

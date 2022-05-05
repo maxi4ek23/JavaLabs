@@ -8,8 +8,8 @@ import lombok.Setter;
 public class Stapler extends OfficeSupply {
     private String housingMaterial;
 
-    public Stapler(String name, int price, int quantity, String origin, int id, String color, int weight,
-            String housingMaterial) {
+    public Stapler(String name, int price, int quantity, String origin, int id,
+            String color, int weight, String housingMaterial) {
         super(name, price, quantity, origin, id, color, weight);
         this.housingMaterial = housingMaterial;
     }
