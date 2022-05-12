@@ -1,23 +1,21 @@
 # JavaLabs
-2_java_lab
-# Second_Java_Lab
+3_java_lab
+# Third_Java_Lab
 
-![image](https://user-images.githubusercontent.com/91155188/161729006-9622c3bc-2759-4954-b76f-82b097afab5e.png)
+![image](https://user-images.githubusercontent.com/91155188/163682475-7a0ecebb-df66-463e-8b33-22265e53917c.png)
 
-Опис завдання: 
+Task description:
 
-- Реалізувати ієрархію класів до завдання з лабораторної №2 (секція Зимова школа).
+- I need to create a class - Manager, what contains logic:
 
-- При записі програми потрібно використовувати домовленості щодо оформлення коду java code convention.
+- Implement a search for goods by colour
 
-- Класи потрібно грамотно розкласти по пакетах.
+- Sort goods by price, weight
 
-- Робота з консоллю або консольне меню повинні бути мінімальними.
+- The implementation of sorting should provide the ability to sort both in descending and ascending order
 
-- Важливо: необхідно реалізувати лише ієрархію класів, код пошуку елементів у списках чи колекціях не входить в 2гу роботу.
+- I need to use the built-in sorting methods available in Java to sort
 
-- Також слід створити обєкти реалізованих вами класів у окремому класі Main, який міститиме main метод.
+- Sorting should be implemented in a separate method
 
-- Слід додати своє прізвище в таблицю до завдання 2 коло обраного варіанту (обирати слід самостійно).
-
-- Якщо вільних варіантів в документі більше не буде - слід написати викладачу і отримати варіант від нього.
+- I can use only one static method (void)
