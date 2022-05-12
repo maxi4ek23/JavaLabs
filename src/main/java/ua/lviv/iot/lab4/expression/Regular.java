@@ -31,7 +31,6 @@ public class Regular {
             firstVowelWord = mtc.group();
             String temp = "###";
             strb.replace(mtc.start(), mtc.end(), temp);
-            // find the longest word
             String[] arrayOfWords = eachSentence.split("\\W");
             Arrays.sort(arrayOfWords,
                     Comparator.comparingInt(String::length).reversed());
