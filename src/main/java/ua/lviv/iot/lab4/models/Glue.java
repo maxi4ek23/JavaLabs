@@ -1,5 +1,36 @@
 package ua.lviv.iot.lab4.models;
 
+ 5_6_java_lab
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Glue extends OfficeSupply {
+    private int volume;
+
+    public Glue(String name, int price, int quantity, String origin, int id,
+            String color, int weight, int volume) {
+        super(name, price, quantity, origin, id, color, weight);
+        this.volume = volume;
+    }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", volume";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + volume;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+
 public class Glue extends OfficeSupplies {
 	private int volume;
 	private String basis;
@@ -25,4 +56,5 @@ public class Glue extends OfficeSupplies {
 	public String toString() {
 		return "Glue " +  super.toString() + " volume=" + volume + ", basis=" + basis + "]\r\n";
 	}
+ main
 }
