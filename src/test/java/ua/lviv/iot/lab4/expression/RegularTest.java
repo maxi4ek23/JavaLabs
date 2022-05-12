@@ -7,9 +7,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class RegularTest {
-    Regular regular;
 
+class RegularTest {
+    Regular regular = new Regular();
     @BeforeAll
     static void setUpBeforeClass() throws Exception {
     }
@@ -20,7 +20,6 @@ class RegularTest {
 
     @BeforeEach
     void setUp() throws Exception {
-        regular = new Regular();
     }
 
     @AfterEach
@@ -28,26 +27,25 @@ class RegularTest {
     }
 
     @Test
-    void testWordsSwitch() {
+    void testSwitchWord() {
         var actual = regular.switchWords();
-        String expected = "Founded traditionally 6 "
-                + "March 1902 as Madrid Football "
-                + "Club, the club has on worn a "
-                + "white home kit since inception."
-                + " The is title real honorific "
-                + "Spanish for and was bestowed to "
-                + "the club by King Alfonso XIII in"
-                + " 1920 together with the royal "
-                + "crown in the emblem. The team "
-                + "has played capacity home matches"
-                + " in the 81,044-its Santiago "
-                + "Bernabeu Stadium in downtown "
-                + "Madrid since 1947. throughout "
-                + "most European sporting entities,"
-                + " Real Madrid's members have "
-                + "owned and operated the club "
-                + "Unlike its history.";
-        Assert.assertEquals(expected, actual);
+        String expected = "Founded traditionally"
+                + " 6 March 1902 as Madrid Football"
+                + " Club, the club has on worn a white"
+                + " home kit since inception. The is "
+                + "title real honorific Spanish for "
+                + "and was bestowed to the club by "
+                + "King Alfonso XIII in 1920 together"
+                + " with the royal crown in the "
+                + "emblem. The team has played "
+                + "capacity home matches in the "
+                + "81,044-its Santiago Bernabeu "
+                + "Stadium in downtown Madrid since"
+                + " 1947. throughout most European"
+                + " sporting entities, Real Madrid's"
+                + " members have owned and operated"
+                + " the club Unlike its history.";
+      Assert.assertEquals(expected, actual);
     }
 
 }
