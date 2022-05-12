@@ -1,4 +1,5 @@
 # JavaLabs
+3_java_lab
 # Third_Java_Lab
 
 ![image](https://user-images.githubusercontent.com/91155188/163682475-7a0ecebb-df66-463e-8b33-22265e53917c.png)
@@ -18,4 +19,3 @@ Task description:
 - Sorting should be implemented in a separate method
 
 - I can use only one static method (void)
-
