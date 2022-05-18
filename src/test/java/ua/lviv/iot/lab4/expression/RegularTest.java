@@ -7,9 +7,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-
 class RegularTest {
+
     Regular regular = new Regular();
+
     @BeforeAll
     static void setUpBeforeClass() throws Exception {
     }
@@ -28,7 +29,8 @@ class RegularTest {
 
     @Test
     void testSwitchWord() {
-        var actual = regular.switchWords();
+        var actual = regular
+                .switchFirstVowelWordWithTheLongestOneInEachSentences();
         String expected = "Founded traditionally"
                 + " 6 March 1902 as Madrid Football"
                 + " Club, the club has on worn a white"
@@ -45,7 +47,7 @@ class RegularTest {
                 + " sporting entities, Real Madrid's"
                 + " members have owned and operated"
                 + " the club Unlike its history.";
-      Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
 }

@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class Regular {
 
-    public String switchWords() {
+    public String switchFirstVowelWordWithTheLongestOneInEachSentences() {
         String text = "Founded on 6 March 1902 as Madrid Football Club,"
                 + " the club has traditionally worn a white home kit "
                 + "since inception. The honorific title real is Spanish"
@@ -17,24 +17,23 @@ public class Regular {
                 + " the 81,044-capacity Santiago Bernabeu Stadium in"
                 + " downtown Madrid since 1947. Unlike most European"
                 + " sporting entities, Real Madrid's members have "
-                + "owned and operated the club throughout its "
-                + "history.";
+                + "owned and operated the club throughout its " + "history.";
         String[] arrayOfSentences = text.split("\\.");
         String firstVowelWord;
         StringBuilder result = new StringBuilder();
         for (String eachSentence : arrayOfSentences) {
-            StringBuilder strb = new StringBuilder();
-            strb.append(eachSentence);
-            Matcher mtc = Pattern.compile("\\b[AEIOUYaeiouy](\\w+)\\b")
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append(eachSentence);
+            Matcher matcher = Pattern.compile("\\b[AEIOUYaeiouy](\\w+)\\b")
                     .matcher(eachSentence);
-            mtc.find();
-            firstVowelWord = mtc.group();
-            String temp = "###";
-            strb.replace(mtc.start(), mtc.end(), temp);
+            matcher.find();
+            firstVowelWord = matcher.group();
+            String helpfulVariableWhichHelpSwitchTwoWords = "###";
+            stringBuilder.replace(matcher.start(), matcher.end(), helpfulVariableWhichHelpSwitchTwoWords);
             String[] arrayOfWords = eachSentence.split("\\W");
             Arrays.sort(arrayOfWords,
                     Comparator.comparingInt(String::length).reversed());
-            String sentenceResult = strb.toString();
+            String sentenceResult = stringBuilder.toString();
             sentenceResult = sentenceResult.replace(arrayOfWords[0],
                     firstVowelWord);
             sentenceResult = sentenceResult.replace("###", arrayOfWords[0]);
